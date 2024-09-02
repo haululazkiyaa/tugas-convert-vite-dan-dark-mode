@@ -1,5 +1,6 @@
-import { AppContext } from "../App";
+import { AuthContext } from "../context/AuthContext";
 import { NavLink } from "react-router-dom";
+import { ThemeContext } from "../context/ThemeContext";
 import ThemeToggle from "./ThemeToggle";
 import { listMenu } from "../data/menu";
 import padiUmkmLogo from "../assets/logo.svg";
@@ -7,8 +8,8 @@ import padiUmkmLogoWhite from "../assets/logo-white.svg";
 import { useContext } from "react";
 
 const Header = () => {
-  const { isLogin, handleLogin, handleLogout, darkTheme } =
-    useContext(AppContext);
+  const { isLogin, handleLogin, handleLogout } = useContext(AuthContext);
+  const { darkTheme } = useContext(ThemeContext);
   return (
     <header className="bg-white dark:bg-slate-800">
       <div className="container lg:px-20 xl:px-40 px-10 py-4 flex items-center">

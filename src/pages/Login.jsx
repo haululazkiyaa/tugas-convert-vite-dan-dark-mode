@@ -1,7 +1,8 @@
-import PropTypes from "prop-types";
+import { AuthContext } from "../context/AuthContext";
+import { useContext } from "react";
 
-const Login = (props) => {
-  const { handleLogin } = props;
+const Login = () => {
+  const { handleLogin } = useContext(AuthContext);
   return (
     <section className="h-full min-h-[360px] mx-10 my-10 lg:my-20 xl:my-20 lg:mx-40 xl:mx-40 text-[#444B55] dark:text-[#ffffff] text-center">
       <h1 className="text-4xl font-bold text-gray-800 dark:text-[#ffffff] mb-12">
@@ -18,7 +19,3 @@ const Login = (props) => {
 };
 
 export default Login;
-
-Login.propTypes = {
-  handleLogin: PropTypes.func.isRequired,
-};

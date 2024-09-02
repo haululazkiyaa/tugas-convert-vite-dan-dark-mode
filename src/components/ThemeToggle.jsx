@@ -1,8 +1,8 @@
-import { AppContext } from "../App";
+import { ThemeContext } from "../context/ThemeContext";
 import { useContext } from "react";
 
 const ThemeToggle = () => {
-  const { darkTheme, changeTheme } = useContext(AppContext);
+  const { darkTheme, changeTheme } = useContext(ThemeContext);
 
   return (
     <label className="inline-flex items-center cursor-pointer">
